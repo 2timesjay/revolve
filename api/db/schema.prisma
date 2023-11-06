@@ -18,13 +18,10 @@ model Budget {
   id    Int     @id @default(autoincrement())
   email String  @unique
   name  String?
-  Item  Item[]
 }
 
 model Item {
-  id       Int    @id @default(autoincrement())
-  name     String
-  amount   Int    @default(0)
-  budgetId Int
-  budget   Budget @relation(fields: [budgetId], references: [id])
+  id     Int    @id @default(autoincrement())
+  name   String
+  amount Int    @default(0)
 }

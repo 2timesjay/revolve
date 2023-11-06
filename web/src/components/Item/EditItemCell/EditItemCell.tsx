@@ -13,7 +13,6 @@ export const QUERY = gql`
       id
       name
       amount
-      budgetId
     }
   }
 `
@@ -23,7 +22,6 @@ const UPDATE_ITEM_MUTATION = gql`
       id
       name
       amount
-      budgetId
     }
   }
 `

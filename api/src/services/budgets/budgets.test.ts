@@ -30,20 +30,20 @@ describe('budgets', () => {
 
   scenario('creates a budget', async () => {
     const result = await createBudget({
-      input: { email: 'String3262047' },
+      input: { email: 'String3116913' },
     })
 
-    expect(result.email).toEqual('String3262047')
+    expect(result.email).toEqual('String3116913')
   })
 
   scenario('updates a budget', async (scenario: StandardScenario) => {
     const original = (await budget({ id: scenario.budget.one.id })) as Budget
     const result = await updateBudget({
       id: original.id,
-      input: { email: 'String38944822' },
+      input: { email: 'String51463382' },
     })
 
-    expect(result.email).toEqual('String38944822')
+    expect(result.email).toEqual('String51463382')
   })
 
   scenario('deletes a budget', async (scenario: StandardScenario) => {

@@ -57,10 +57,6 @@ const Item = ({ item }: Props) => {
               <th>Amount</th>
               <td>{item.amount}</td>
             </tr>
-            <tr>
-              <th>Budget id</th>
-              <td>{item.budgetId}</td>
-            </tr>
           </tbody>
         </table>
       </div>

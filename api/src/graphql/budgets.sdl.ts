@@ -3,7 +3,6 @@ export const schema = gql`
     id: Int!
     email: String!
     name: String
-    Item: [Item]!
   }
 
   type Query {
