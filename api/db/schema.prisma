@@ -18,25 +18,13 @@ model Budget {
   id    Int     @id @default(autoincrement())
   email String  @unique
   name  String?
-  Stage Stage[]
   Item  Item[]
-}
-
-model Stage {
-  id       Int    @id @default(autoincrement())
-  name     String
-  budgetId Int
-  budget   Budget @relation(fields: [budgetId], references: [id])
-
-  Item Item[]
 }
 
 model Item {
   id       Int    @id @default(autoincrement())
   name     String
-  stage    Stage  @relation(fields: [stageId], references: [id])
   amount   Int    @default(0)
   budgetId Int
   budget   Budget @relation(fields: [budgetId], references: [id])
-  stageId  Int
 }
