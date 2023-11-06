@@ -8,7 +8,6 @@ export const QUERY = gql`
   query FindBudgetById($id: Int!) {
     budget: budget(id: $id) {
       id
-      email
       name
     }
   }

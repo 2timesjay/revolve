@@ -53,10 +53,6 @@ const Budget = ({ budget }: Props) => {
               <td>{budget.id}</td>
             </tr>
             <tr>
-              <th>Email</th>
-              <td>{budget.email}</td>
-            </tr>
-            <tr>
               <th>Name</th>
               <td>{budget.name}</td>
             </tr>

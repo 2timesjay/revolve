@@ -1,7 +1,6 @@
 export const schema = gql`
   type Budget {
     id: Int!
-    email: String!
     name: String
   }
 
@@ -11,12 +10,10 @@ export const schema = gql`
   }
 
   input CreateBudgetInput {
-    email: String!
     name: String
   }
 
   input UpdateBudgetInput {
-    email: String
     name: String
   }
 

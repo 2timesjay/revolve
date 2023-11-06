@@ -42,7 +42,6 @@ const BudgetsList = ({ budgets }: FindBudgets) => {
         <thead>
           <tr>
             <th>Id</th>
-            <th>Email</th>
             <th>Name</th>
             <th>&nbsp;</th>
           </tr>
@@ -51,7 +50,6 @@ const BudgetsList = ({ budgets }: FindBudgets) => {
           {budgets.map((budget) => (
             <tr key={budget.id}>
               <td>{truncate(budget.id)}</td>
-              <td>{truncate(budget.email)}</td>
               <td>{truncate(budget.name)}</td>
               <td>
                 <nav className="rw-table-actions">

@@ -11,7 +11,6 @@ export const QUERY = gql`
   query EditBudgetById($id: Int!) {
     budget: budget(id: $id) {
       id
-      email
       name
     }
   }
@@ -20,7 +19,6 @@ const UPDATE_BUDGET_MUTATION = gql`
   mutation UpdateBudgetMutation($id: Int!, $input: UpdateBudgetInput!) {
     updateBudget(id: $id, input: $input) {
       id
-      email
       name
     }
   }

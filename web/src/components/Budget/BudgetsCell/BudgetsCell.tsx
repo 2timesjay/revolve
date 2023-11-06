@@ -9,7 +9,6 @@ export const QUERY = gql`
   query FindBudgets {
     budgets {
       id
-      email
       name
     }
   }
