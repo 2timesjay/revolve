@@ -7,6 +7,16 @@ const HomePage = () => {
       <MetaTags title="Home" description="Home page" />
 
       <main>Home</main>
+      <nav>
+        <ul>
+          <li>
+            <Link to={routes.budgets()}>Budgets</Link>
+          </li>
+          <li>
+            <Link to={routes.items()}>Items</Link>
+          </li>
+        </ul>
+      </nav>
     </>
   )
 }
