@@ -22,12 +22,13 @@ describe('items', () => {
     expect(result).toEqual(scenario.item.one)
   })
 
-  scenario('creates a item', async () => {
+  scenario('creates a item', async (scenario: StandardScenario) => {
     const result = await createItem({
-      input: { name: 'String' },
+      input: { name: 'String', budgetId: scenario.item.two.budgetId },
     })
 
     expect(result.name).toEqual('String')
+    expect(result.budgetId).toEqual(scenario.item.two.budgetId)
   })
 
   scenario('updates a item', async (scenario: StandardScenario) => {

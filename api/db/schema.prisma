@@ -17,10 +17,13 @@ model User {
 model Budget {
   id   Int     @id @default(autoincrement())
   name String?
+  Item Item[]
 }
 
 model Item {
-  id     Int    @id @default(autoincrement())
-  name   String
-  amount Int    @default(0)
+  id       Int    @id @default(autoincrement())
+  name     String
+  amount   Int    @default(0)
+  budget   Budget @relation(fields: [budgetId], references: [id])
+  budgetId Int
 }

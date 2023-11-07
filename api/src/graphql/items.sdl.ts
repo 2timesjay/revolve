@@ -3,6 +3,8 @@ export const schema = gql`
     id: Int!
     name: String!
     amount: Int!
+    budget: Budget!
+    budgetId: Int!
   }
 
   type Query {
@@ -13,11 +15,13 @@ export const schema = gql`
   input CreateItemInput {
     name: String!
     amount: Int!
+    budgetId: Int!
   }
 
   input UpdateItemInput {
     name: String
     amount: Int
+    budgetId: Int
   }
 
   type Mutation {

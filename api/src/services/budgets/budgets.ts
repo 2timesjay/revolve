@@ -1,4 +1,8 @@
-import type { QueryResolvers, MutationResolvers } from 'types/graphql'
+import type {
+  QueryResolvers,
+  MutationResolvers,
+  BudgetRelationResolvers,
+} from 'types/graphql'
 
 import { db } from 'src/lib/db'
 
@@ -32,4 +36,10 @@ export const deleteBudget: MutationResolvers['deleteBudget'] = ({ id }) => {
   return db.budget.delete({
     where: { id },
   })
+}
+
+export const Budget: BudgetRelationResolvers = {
+  Item: (_obj, { root }) => {
+    return db.budget.findUnique({ where: { id: root?.id } }).Item()
+  },
 }

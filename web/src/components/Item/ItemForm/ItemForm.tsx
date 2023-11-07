@@ -71,6 +71,24 @@ const ItemForm = (props: ItemFormProps) => {
 
         <FieldError name="amount" className="rw-field-error" />
 
+        <Label
+          name="budgetId"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Budget id
+        </Label>
+
+        <NumberField
+          name="budgetId"
+          defaultValue={props.item?.budgetId}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+          validation={{ required: true }}
+        />
+
+        <FieldError name="budgetId" className="rw-field-error" />
+
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">
             Save
