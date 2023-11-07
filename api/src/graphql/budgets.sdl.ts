@@ -2,7 +2,7 @@ export const schema = gql`
   type Budget {
     id: Int!
     name: String
-    Item: [Item]!
+    items: [Item]!
   }
 
   type Query {

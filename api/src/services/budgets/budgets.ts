@@ -39,7 +39,7 @@ export const deleteBudget: MutationResolvers['deleteBudget'] = ({ id }) => {
 }
 
 export const Budget: BudgetRelationResolvers = {
-  Item: (_obj, { root }) => {
-    return db.budget.findUnique({ where: { id: root?.id } }).Item()
+  items: (_obj, { root }) => {
+    return db.budget.findUnique({ where: { id: root?.id } }).items()
   },
 }
