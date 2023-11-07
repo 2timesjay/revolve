@@ -9,6 +9,7 @@ export const QUERY = gql`
   query FindBudgetViewQuery($id: Int!) {
     budget: budget(id: $id) {
       id
+      name
       items {
         id
         name
@@ -28,8 +29,18 @@ export const Failure = ({
   <div style={{ color: 'red' }}>Error: {error?.message}</div>
 )
 
-export const Success = ({
-  budgetView,
-}: CellSuccessProps<FindBudgetViewQuery, FindBudgetViewQueryVariables>) => {
-  return <div>{JSON.stringify(budgetView)}</div>
+export const Success = ({ budget }: CellSuccessProps<FindBudgetViewQuery>) => {
+  console.log(budget)
+  return (
+    <>
+      <div>
+        {budget.id} {budget.name}
+      </div>
+      {budget.items.map((item) => (
+        <div key={item.id}>
+          {item.id} {item.name} {item.amount}
+        </div>
+      ))}
+    </>
+  )
 }
