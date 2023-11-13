@@ -9,14 +9,16 @@ const HomePage = () => {
       <MetaTags title="Home" description="Home page" />
 
       <main>Home</main>
-      <BudgetViewPage id={1} />
       <nav>
         <ul>
           <li>
-            <Link to={routes.budgets()}>Budgets</Link>
+            <Link to={routes.budgets()}>Budgets List</Link>
           </li>
           <li>
             <Link to={routes.items()}>Items</Link>
+          </li>
+          <li>
+            <Link to={routes.budgetView({ id: 1 })}>Example Budget</Link>
           </li>
         </ul>
       </nav>
